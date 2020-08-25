@@ -1,0 +1,20 @@
+table, tr, td {
+  background-color: rgb(173, 236, 217);
+  padding: 12px;
+  margin: 120px;
+  /* border: 1px solid black; */
+   /* border-bottom: none; */
+  border-collapse: collapse;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

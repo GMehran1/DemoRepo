@@ -1,0 +1,38 @@
+<P>Calculation Summary</P>
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Term</th>
+    <th>Amortization</th>
+  </tr>
+  <tr>
+    <td>Number of Payments</td>
+    <td>{{mortgageTermSummary.numberOfPayments}}</td>
+    <td>{{mortgageAmrtSummary.numberOfPayments}}</td>
+  </tr>
+  <tr>
+    <td>Mortgage Payment</td>
+    <td>{{mortgageTermSummary.mortgagePayment | currency}}</td>
+    <td>{{mortgageAmrtSummary.mortgagePayment | currency}}</td>
+  </tr>
+  <tr>
+    <td>Prepayment</td>
+    <td>{{mortgageTermSummary.prepaymentInfo.prepaymentAmount | currency}}</td>
+    <td>{{mortgageAmrtSummary.prepaymentInfo.prepaymentAmount | currency}}</td>
+  </tr>
+  <tr>
+    <td>Principal Payments</td>
+    <td>{{mortgageTermSummary.principalPayments | currency}}</td>
+    <td>{{mortgageAmrtSummary.principalPayments | currency}}</td>
+  </tr>
+  <tr>
+    <td>Interest Payments</td>
+    <td>{{mortgageTermSummary.interestPayments | currency}}</td>
+    <td>{{mortgageAmrtSummary.interestPayments | currency}}</td>
+  </tr>
+  <tr>
+    <td>Total Cost </td>
+    <td>{{mortgageTermSummary.totalCost | currency}}</td>
+    <td>{{mortgageAmrtSummary.totalCost | currency}}</td>
+  </tr>
+</table>

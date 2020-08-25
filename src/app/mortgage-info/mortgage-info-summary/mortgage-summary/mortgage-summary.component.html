@@ -1,0 +1,24 @@
+<p>Mortgage Summary</p>
+<div>Over the {{mortgageAmrtSummary.numberOfPayments/12}}-year amortization period, you will:</div>
+<ul>
+  <li>have made {{mortgageAmrtSummary.numberOfPayments}} monthly (12x per year) payments of {{mortgageAmrtSummary.monthlyPayment | currency}}.</li>
+  <li *ngIf="mortgageAmrtSummary.prepaymentInfo.prepaymentAmount > 0">have made a one-time prepayment of {{mortgageAmrtSummary.prepaymentInfo.prepaymentAmount | currency}} at payment number 1.</li>
+  <li>have paid {{mortgageAmrtSummary.principalPayments | currency}} in principal, {{mortgageAmrtSummary.interestPayments | currency}} in interest, for a total of {{(mortgageAmrtSummary.principalPayments + mortgageAmrtSummary.interestPayments) | currency}}.</li>
+</ul>
+<div>Over the {{mortgageTermSummary.numberOfPayments/12}}-year term, you will:</div>
+<ul>
+  <li>have made {{mortgageTermSummary.numberOfPayments}} monthly (12x per year) payments of {{mortgageTermSummary.monthlyPayment | currency}}.</li>
+  <li *ngIf="mortgageAmrtSummary.prepaymentInfo.prepaymentAmount > 0">have made a one-time prepayment of {{mortgageTermSummary.prepaymentInfo.prepaymentAmount | currency}} at payment number 1.</li>
+  <li>have paid {{mortgageTermSummary.principalPayments | currency}} in principal, {{mortgageTermSummary.interestPayments | currency}} in interest, for a total of {{(mortgageTermSummary.principalPayments + mortgageTermSummary.interestPayments) | currency}}.</li>
+</ul>
+<div>At the end of your {{mortgageTermSummary.numberOfPayments/12}}-year term, you will:</div>
+<ul>
+  <li>have a balance of {{(mortgageTermSummary.mortgageAmount - mortgageTermSummary.principalPayments) | currency}}</li>
+</ul>
+<div *ngIf="mortgageAmrtSummary.prepaymentInfo.prepaymentAmount > 0">
+  <div>Prepayment Savings</div>
+  <ul>
+    <li>By the end of the amortization period, with your one-time prepayment of {{(mortgageAmrtSummary.prepaymentInfo.prepaymentAmount) | currency}}, you save in interest {{(mortgageAmrtSummary.prepaymentInterestSavings) | currency}} and pay your mortgage off {{(mortgageAmrtSummary.numberOfPayments - mortgageAmrtSummary.prepaymentPaymentNo)}} months sooner than if you had the same mortgage with no prepayment.</li>
+    <li>By the end of the term, with your one-time prepayment of {{(mortgageTermSummary.prepaymentInfo.prepaymentAmount) | currency}}, you save {{(mortgageTermSummary.prepaymentInterestSavings) | currency}} more in interest than if you had the same mortgage with no prepayment.</li>
+  </ul>
+</div>

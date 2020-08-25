@@ -1,0 +1,30 @@
+<form [formGroup]="fgMortgagePrepayment">
+  <table>
+    <tr>
+      <td>
+        <label for="PrepaymentAmount">Prepayment Amount</label>
+      </td>
+      <td>
+        <input type="text" id="PrepaymentAmount" [formControl]="fcPrepaymentAmount">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="PrepaymentFrequency">Prepayment Frequency</label>
+      </td>
+      <td>
+        <select id="PrepaymentFrequency" style="width:90px" [formControl]="fcPrepaymentFrequency">
+          <option value=1>One time</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="StartWithPayment">Start With Payment</label>
+      </td>
+      <td>
+        <input type="text" [value]="1" [formControl]="fcStartWithPayment" readonly>
+      </td>
+    </tr>
+  </table>
+  </form>

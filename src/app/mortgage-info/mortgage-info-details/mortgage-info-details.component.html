@@ -1,0 +1,52 @@
+<form [formGroup]="fgMortgageDetailsForm">
+  <table>
+    <tr>
+      <td>
+        <label for="MortgageAmount">Mortgage Amount</label></td>
+        <td>
+        <input type="text" id="MortgageAmount" [formControl]="fcMortgageAmount">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="InterestRate">Interest Rate</label></td>
+        <td>
+        <input type="text" id="InterestRate" [formControl]="fcInterestRate">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="AmortizationPeriodYear">Amortization Period</label></td>
+        <td>
+          <table><tr><td>
+            <select type="text" id="AmortizationPeriodYear" [formControl]="fcAmortizationPeriodYear">
+              <option *ngFor="let amrtyr of amrtPeriodYear" [value]="amrtyr.value">{{amrtyr.text}}</option>
+            </select>
+          </td>
+          <td>
+            <select type="text" id="AmortizationPeriodMonth" [formControl]="fcAmortizationPeriodMonth">
+              <option *ngFor="let amrtmnth of amrtPeriodMonth" [value]="amrtmnth.value">{{amrtmnth.text}}</option>
+            </select>
+          </td></tr></table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="PaymentFrequency">Payment Frequency</label></td>
+        <td>
+          <select id="PaymentFrequency" [formControl]="fcPaymentFrequency">
+            <option *ngFor="let paymtFr of paymentFrequency" [value]="paymtFr.value">{{paymtFr.text}}</option>
+          </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="Term">Term</label></td>
+        <td>
+        <select type="text" id="MortgageAmount" style="width:90px" [formControl]="fcTerm">
+          <option *ngFor="let trm of term" [value]="trm.value">{{trm.text}}</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</form>

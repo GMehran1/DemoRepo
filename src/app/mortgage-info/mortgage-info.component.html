@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <td>
+        <app-mortgage-info-details #mortgageInfoRef></app-mortgage-info-details>
+    </td>
+    <td>
+        <app-mortgage-info-prepayment #mortgageInfoPrepaymentRef></app-mortgage-info-prepayment>
+    </td>
+  </tr>
+  <tr><button class="button" id="Calculate" [disabled]="!mortgageInfoRef.fgMortgageDetailsForm.valid" (click)="calculateMortgage()">Calculate</button></tr>
+  <tr *ngIf="mortgageInfo">
+    <app-mortgage-info-summary></app-mortgage-info-summary>
+  </tr>
+</table>
