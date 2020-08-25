@@ -18,7 +18,7 @@ describe('TestserviceService', () => {
     let mortgageTermSummary: IMortgageCalculationSummary = null;
     service.mortgageTermObs.subscribe(objTerm => mortgageTermSummary = objTerm);
     service.calculateMortgage(mortgageinfo);
-    expect(mortgageTermSummary.monthlyPayment).toEqual(581.60);
+    expect(mortgageTermSummary.monthlyPayment).toEqual(586.92);
   });
   it('calculate interest and principal amounts monthly payment', () => {
     const service: MortgageCalculatorService = TestBed.get(MortgageCalculatorService);
@@ -27,7 +27,7 @@ describe('TestserviceService', () => {
     let mortgageTermSummary: IMortgageCalculationSummary = null;
     service.mortgageTermObs.subscribe(objTerm => mortgageTermSummary = objTerm);
     service.calculateMortgage(mortgageinfo);
-    expect(mortgageTermSummary.interestPayments).toEqual(23679.53);
-    expect(mortgageTermSummary.principalPayments).toEqual(11216.47);
+    expect(mortgageTermSummary.interestPayments).toEqual(23636.94);
+    expect(mortgageTermSummary.principalPayments).toEqual(11578.26);
   });
 });
